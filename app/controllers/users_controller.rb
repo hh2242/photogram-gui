@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     @user.username = params[:input_username]
 
     if @user.save
-      redirect_to("/users")
+      redirect_to("/users/" + @user.username)
     else
       render :new
     end

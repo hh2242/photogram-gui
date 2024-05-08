@@ -19,7 +19,7 @@ class PhotosController < ApplicationController
     @photo.owner_id = owner_id
 
     if @photo.save
-      redirect_to("/photos")
+      redirect_to("/photos/" + @photo.id.to_s)
     else
       render :new
     end
